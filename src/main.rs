@@ -1,4 +1,4 @@
-const DAILY_LINES: [&str; 12] = [
+const GIFTS: [&str; 12] = [
     "And a partridge in a pear tree",
     "Two turle doves,",
     "Three French hens,",
@@ -10,7 +10,7 @@ const DAILY_LINES: [&str; 12] = [
     "Nine ladies dancing,",
     "Ten lords a-leeping,",
     "Eleven pipers piping,",
-    "Twelve drummers drumming"
+    "Twelve drummers drumming,"
 ];
 
 const DAYS: [&str; 12] = [
@@ -29,7 +29,25 @@ const DAYS: [&str; 12] = [
 ];
 
 fn main() {
-    println!("{OPENING_LINES}");
-    println!("{}", DAILY_LINES[0]);
-    println!("{}", DAYS[0])
+    for i in 0..12 {
+        print_opening_line(i);
+
+        if i == 0 {
+            println!("A partridge in a pair tree")
+        } else {
+            print_gifts(i);
+        }
+
+        println!("");
+    }
+}
+
+fn print_opening_line(index: usize) {
+    println!("On the {} day of Christmas,\nmy true love gave to me", DAYS[index]);
+}
+
+fn print_gifts(index: usize) {
+    for i in (0..(index + 1)).rev() {
+        println!("{}", GIFTS[i])
+    }
 }
