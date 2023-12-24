@@ -1,5 +1,3 @@
-const OPENING_LINES: &str = "On the first day of Christmas,\nmy true love gave to me";
-
 const DAILY_LINES: [&str; 12] = [
     "And a partridge in a pear tree",
     "Two turle doves,",
@@ -15,7 +13,23 @@ const DAILY_LINES: [&str; 12] = [
     "Twelve drummers drumming"
 ];
 
+const DAYS: [&str; 12] = [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth",
+    "seventh",
+    "eighth",
+    "ninth",
+    "tenth",
+    "eleventh",
+    "twelfth"
+];
+
 fn main() {
     println!("{OPENING_LINES}");
     println!("{}", DAILY_LINES[0]);
+    println!("{}", DAYS[0])
 }
